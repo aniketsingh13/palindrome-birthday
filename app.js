@@ -145,7 +145,7 @@ function clickHandler(e) {
             outputRe.innerText = "yay! your b'day is palindrome!! 🥳🥳";
         } else {
             var [count, nextDate] = nextPalindromDateNumber(date);
-            outputRe.innerText = ` 😢 The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${count} days `
+            outputRe.innerText = `  The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${count} days 😢`
         }
     }
 
