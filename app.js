@@ -27,13 +27,18 @@ function dateIntoString(date) {
     };
     if (date.day < 10) {
         dateStr.day = "0" + date.day;
+       
+        
     } else {
         dateStr.day = date.day.toString();
     }
     if (date.month < 10) {
         dateStr.month = "0" + date.month;
-    } else {
+        
+    } 
+      else {
         dateStr.month = date.month.toString();
+       
     }
     dateStr.year = date.year.toString();
     return dateStr;
@@ -52,14 +57,14 @@ function allDateFormate(date) {
 
 function getAllDateFormatPalindrome(date) {
     var listOfPalindromes = allDateFormate(date);
-    var flag = false;
+    var temp = false;
     for (var i = 0; i < listOfPalindromes.length; i++) {
         if (isPalindrome(listOfPalindromes[i])) {
-            flag = true;
+            temp = true;
             break;
         }
     }
-    return flag;
+    return temp;
 }
 
 function isLeapYear(year) {
@@ -124,14 +129,14 @@ function nextPalindromDateNumber(date) {
     return [count, nextDate];
 }
 
-function clickHandler() {
+function clickHandler(e) {
 
     var bdayInput = inputVolve.value;
     if (bdayInput !== "") {
         var listOfDate = bdayInput.split("-");
         var date = {
             day: Number(listOfDate[2]),
-            date: Number(listOfDate[1]),
+            month: Number(listOfDate[1]),
             year: Number(listOfDate[0])
         };
 
@@ -140,7 +145,7 @@ function clickHandler() {
             outputRe.innerText = "yay! your b'day is palindrome!! 🥳🥳";
         } else {
             var [count, nextDate] = nextPalindromDateNumber(date);
-            outputRe.innerText = "The next palindrome Date is " + nextDate.day + nextDate.month + nextDate.year + "you miss it by " + count;
+            outputRe.innerText = ` 😢 The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${count} days `
         }
     }
 
