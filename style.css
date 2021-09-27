@@ -7,9 +7,7 @@ body{
     background-color: #FF00E4;
     font-family: 'Noto Sans', sans-serif;
 }
-h1{
-   
-}
+
 #input-value{
 
     margin: .9rem;
@@ -20,4 +18,10 @@ h1{
     width: 8%;
     height: 4vh;
      background-color: #ED50F1;
+}
+.gt {
+    font-size: 250%;
+}
+h2{
+    margin-top: 1rem;
 }
